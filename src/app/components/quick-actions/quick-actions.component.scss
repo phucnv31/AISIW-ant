@@ -1,0 +1,36 @@
+.quick-actions-wrapper {
+    align-self: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    .quick-actions-btn {
+        padding: 0.3rem;
+        border: 0;
+        height: 80px;
+        width: 130px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: none;
+        border-radius: 10px;
+        background-color: #dbdbdb;
+        opacity: 0.85;
+        i, fa-icon {
+            font-size: 2rem;
+            line-height: 2rem;
+        }
+        span {
+            margin: 0;
+        }
+        &:hover, &:focus {
+            color: #000000;
+            opacity: 1;
+        }
+    }
+}

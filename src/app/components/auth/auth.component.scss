@@ -1,0 +1,12 @@
+.login-form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    .login-card {
+        width: 350px;
+        &__title {
+            text-align: center;
+        }
+    }
+}

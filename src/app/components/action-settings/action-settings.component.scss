@@ -1,0 +1,40 @@
+.action-settings-component-wrapper {
+  .ant-row {
+    flex: 1;
+  }
+
+  .dynamic-quick-action-wrapper {
+    max-width: 350px;
+    .dynamic-quick-action-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      overflow: auto;
+      .dynamic-quick-action-item {
+        background-color: #54C595;
+        border-radius: 4px;
+        padding: 0.2rem;
+        margin: 0.2rem;
+        width: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+          font-size: 2rem;
+        }
+        &:hover, &:focus {
+          background-color: #05a963;
+        }
+      }
+    }
+  }
+
+  .action-settings-card {
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+    .ant-card-extra {
+      padding: 0;
+    }
+  }
+}

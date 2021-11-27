@@ -5,7 +5,9 @@ import { catchError, map } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 import { SystemConstants } from '../common/constants';
 import { Router } from '@angular/router';
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class DataService {
   private headers: HttpHeaders;
   constructor(private http: HttpClient, private router: Router) {

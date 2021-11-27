@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+nz-option-item {
+  .custom-star-nz-option {
+    display: flex;
+    justify-content: space-between;
+    i {
+      font-size: 1.5rem;
+    }
+  }
+}

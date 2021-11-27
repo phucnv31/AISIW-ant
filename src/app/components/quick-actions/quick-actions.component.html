@@ -1,0 +1,13 @@
+<div class="quick-actions-wrapper">
+  <button (click)="onStart()" class="quick-actions-btn" nz-button [nzSize]="btnSize" nzType="default"><i nz-icon
+      nzType="play-square" nzTheme="outline"></i>Start</button>
+  <button (click)="onPickTarget()" class="quick-actions-btn" nz-button [nzSize]="btnSize" nzType="default">
+    <fa-icon [icon]="faWindowMaximize"></fa-icon>Pick a target
+  </button>
+  <button (click)="onAddAction()" class="quick-actions-btn" nz-button [nzSize]="btnSize" nzType="default">
+    <fa-icon [icon]="faPlus"></fa-icon>Add an action
+  </button>
+  <button (click)="onRemoveAction()" class="quick-actions-btn" nz-button [nzSize]="btnSize" nzType="default">
+    <fa-icon [icon]="faTrashAlt"></fa-icon>Remove action
+  </button>
+</div>

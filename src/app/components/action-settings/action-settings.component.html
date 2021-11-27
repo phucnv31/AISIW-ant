@@ -1,0 +1,25 @@
+<div class="action-settings-component-wrapper">
+  <nz-card class="action-settings-card" nzTitle="Action Settings" [nzExtra]="extraTemplate">
+    <div nz-row class="action-settings-card__row">
+      <nz-form-item nzSpan="24">
+        <nz-form-label [nzSpan]="5">Action Type</nz-form-label>
+        <nz-form-control [nzSpan]="19">
+          <nz-select name="select-validate" [ngModel]="selectedActionId">
+            <nz-option *ngFor="let item of actionTypeOptions" nzValue="{{item.id}}" nzLabel="{{item.name}}" [nzCustomContent]="true">
+                <div class="custom-star-nz-option"><span>{{item.name}}</span><i (click)="onPickStar($event, item)" nz-icon nzType="star" [nzTheme]="item.star ? 'fill' : 'outline'"></i></div>
+            </nz-option>
+          </nz-select>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </nz-card>
+  <ng-template #extraTemplate>
+    <div class="dynamic-quick-action-wrapper">
+      <div class="dynamic-quick-action-container">
+        <div *ngFor="let item of favoriteActions" class="dynamic-quick-action-item" (click)="onQuickActionTypeClick(item)">
+          <fa-icon [icon]="item.icon"></fa-icon>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</div>

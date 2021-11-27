@@ -23,13 +23,6 @@ export class AuthGuardService implements CanActivate, CanActivateChild {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): Observable<boolean> | boolean {
-    // if (this.dataService.getLoggedInUser() && this.dataService.getLoggedInUser().AccessToken) {
-    //     return true;
-    // } else {
-    //     this.router.navigateByUrl('auth');
-    //     return false;
-    // }
-    // return true
     let loggedInUser = this.authService.getLoggedInUser();
     if (loggedInUser && loggedInUser.AccessToken) {
       return true;

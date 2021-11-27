@@ -20,6 +20,11 @@ import { IconDefinition } from '@ant-design/icons-angular';
 import * as AllIcons from '@ant-design/icons-angular/icons';
 import { NZ_ICONS } from 'ng-zorro-antd/icon';
 import { NgZorroAntdModule } from './ng-zorro-antd.module';
+import { AuthGuardService } from './components/shared/services/guard.service';
+import { QuickActionsComponent } from './components/quick-actions/quick-actions.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ActionSettingsComponent } from './components/action-settings/action-settings.component';
+import { ActionSettingsDetailComponent } from './components/action-settings-detail/action-settings-detail.component';
 
 registerLocaleData(en);
 const antDesignIcons = AllIcons as {
@@ -30,7 +35,7 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(
 );
 
 @NgModule({
-  declarations: [AppComponent, AuthComponent, MainComponent],
+  declarations: [AppComponent, AuthComponent, MainComponent, QuickActionsComponent, ActionSettingsComponent, ActionSettingsDetailComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -41,6 +46,7 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(
     NzInputModule,
     ReactiveFormsModule,
     NgZorroAntdModule,
+    FontAwesomeModule,
   ],
   providers: [
     {
@@ -48,6 +54,7 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(
       useValue: en_US,
     },
     AuthenticationService,
+    AuthGuardService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: InterceptorService,
