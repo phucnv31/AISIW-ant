@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AISIW';
+  constructor() {
+    window.electronAPI.testEvent(this.title)
+  }
 }
